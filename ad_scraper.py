@@ -19,7 +19,7 @@ def get_ads_for_item(item):
 
     # get google ads
     google_ad_scrape(item)
-    bing_ad_scrape(item)
+    # bing_ad_scrape(item)
 
 
 def google_ad_scrape(item):
@@ -33,7 +33,12 @@ def google_ad_scrape(item):
 
     # get headline text
     for node in soup.findAll(attrs={'class': re.compile(r".*\bads-creative\b.*")}):
+        # headline
         print(node.text)
+        write_to_output_file(node.text)
+        # subtext
+        print(node.findNext('div').contents[0])
+        write_to_output_file(node.findNext('div').contents[0])
 
 
 def bing_ad_scrape(item):
@@ -48,6 +53,12 @@ def bing_ad_scrape(item):
     # get body text
     for node in soup.findAll(attrs={'class': re.compile(r".*\bb_secondaryText\b.*")}):
         print(node.text)
+
+
+def write_to_output_file(write_content):
+    with open("Output.txt", "a") as output_file:
+        output_file.write(write_content)
+        output_file.write("\n")
 
 
 if __name__ == '__main__':
