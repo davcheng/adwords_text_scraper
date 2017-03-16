@@ -9,10 +9,10 @@ import urllib
 item_list = ["phone", "smartphone"]
 
 # create db to store
-conn = sqlite3.connect('ads.db')
-c = conn.cursor()
-c.execute('DROP TABLE IF EXISTS ads;')
-c.execute('CREATE TABLE ads ( id integer primary key autoincrement, item text not null, ad_text text);')
+# conn = sqlite3.connect('ads.db')
+# c = conn.cursor()
+# c.execute('DROP TABLE IF EXISTS ads;')
+# c.execute('CREATE TABLE ads ( id integer primary key autoincrement, item text not null, ad_text text);')
 
 # main ad scraper
 def get_ads_for_item(item):
