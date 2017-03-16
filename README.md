@@ -14,5 +14,6 @@ https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-beautiful-soup
 python3 ad_scraper.py
 ```
 
+3. profit
 
 https://www.crummy.com/software/BeautifulSoup/bs4/doc/
