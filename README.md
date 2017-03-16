@@ -16,4 +16,7 @@ python3 ad_scraper.py
 
 3. profit
 
+NOTE: bing not ready for primetime yet...
+
+bs4 documentation:
 https://www.crummy.com/software/BeautifulSoup/bs4/doc/

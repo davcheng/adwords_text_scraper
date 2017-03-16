@@ -52,7 +52,11 @@ def bing_ad_scrape(item):
 
     # get body text
     for node in soup.findAll(attrs={'class': re.compile(r".*\bb_secondaryText\b.*")}):
-        print(node.text)
+        # print(node.findPrevious('p').contents[0])
+        # write_to_output_file(node.findPrevious('p').contents[0])
+        for text_line in node.contents:
+            print(text_line)
+            write_to_output_file(text_line)
 
 
 def write_to_output_file(write_content):
