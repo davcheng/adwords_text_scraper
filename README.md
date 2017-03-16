@@ -4,13 +4,14 @@ Creates a db (or an output txt file) with text ads for products
 
 written in python 3 + beautiful soup
 
-install beautiful soup 
+
+To Run:
+1. install beautiful soup 
 https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-beautiful-soup
 
+2. cmd line
 ```bash
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-export LANGUAGE=en_US.UTF-8
+python3 ad_scraper.py
 ```
 
 
